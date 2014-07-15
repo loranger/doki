@@ -16,7 +16,7 @@
         <li>{{ link_to($url, $name) }}</li>
     @endif
 @endforeach
-    
+
 @stop
 
 @section('content')

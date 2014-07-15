@@ -29,13 +29,13 @@
               </button>
               <a class="navbar-brand" href="{{{ URL::to('') }}}">Wiki Doki</a>
             </div>
-            
+
             <div class="navbar-collapse collapse">
                 @include('ui.navbar', array('items', $items))
             </div>
         </div>
     </div>
-    
+
     <div class="container">
 
         <ol class="breadcrumb">

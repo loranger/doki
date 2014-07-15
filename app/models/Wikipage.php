@@ -1,7 +1,7 @@
 <?php
 
-class Wikipage {
-
+class Wikipage
+{
     protected $title;
     protected $content;
 
@@ -11,7 +11,8 @@ class Wikipage {
         $this->content = $content;
     }
 
-    public function __get($property) {
+    public function __get($property)
+    {
         if (property_exists($this, $property)) {
             return $this->$property;
         }

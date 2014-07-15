@@ -2,8 +2,8 @@
 
 use \ParsedownExtra;
 
-class WikipageRepository {
-
+class WikipageRepository
+{
     protected $datapath;
 
     public function __construct()
@@ -27,12 +27,11 @@ class WikipageRepository {
         foreach ($array as $name => $value) {
             if (is_array($value)) {
                 $output .= sprintf("<li><a href=\"%s/%s\">%s</a></li>\n%s", $base, $name, ucfirst($name), $this->buildRecursiveList($value, $base . '/' . $name));
-            }
-            else
-            {
+            } else {
                 $output .= sprintf("<li><a href=\"%s/%s\">%s</a></li>\n", $base, $name, ucfirst($name));
             }
         }
+
         return sprintf("%s</ul>\n", $output);
     }
 
@@ -43,8 +42,7 @@ class WikipageRepository {
         if (count($files)) {
             $content = file_get_contents($files[0]);
             $content = (new \ParsedownExtra())->text($content);
-        }
-        else {
+        } else {
             $content = sprintf('<h2>%s is readme-less</h2>', ucfirst($page));
             $content .= sprintf('<h4>Maybe you should take a look at</h4>', ucfirst($page));
             $list = App::make('WikiController')->getNavBar($this->datapath . '/' . $page);
@@ -52,8 +50,8 @@ class WikipageRepository {
             $content = sprintf('<div class="well">%s</div>', $content);
         }
 
-
         $page = new Wikipage($page, $content);
+
         return $page;
     }
 }

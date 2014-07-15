@@ -1,7 +1,7 @@
 <?php
 
-class WikiController extends BaseController {
-
+class WikiController extends BaseController
+{
     public function __construct(WikipageRepository $pages)
     {
         $this->pages = $pages;
@@ -18,13 +18,13 @@ class WikiController extends BaseController {
             if ( !$fileInfo->isDot() && !preg_match('/^(readme|\.)/i', $fileInfo->getFilename()) ) {
                 if ($fileInfo->isDir()) {
                     $nav[$fileInfo->getFilename()] = $this->getNavBar($path . DIRECTORY_SEPARATOR . $fileInfo->getFilename());
-                }
-                else {
+                } else {
                     $infos = pathinfo($fileInfo->getFilename());
                     $nav[$infos['filename']] = $infos['basename'];
                 }
             }
         }
+
         return $nav;
     }
 
@@ -36,6 +36,7 @@ class WikiController extends BaseController {
         foreach ($parts as $key => $name) {
             $breadcrumbs[ucfirst($name)] = implode('/', array_slice($parts, 0, $key + 1));
         }
+
         return $breadcrumbs;
     }
 

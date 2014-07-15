@@ -72,6 +72,7 @@ will build and optimize files for prod.
 
 ## TODO
 
+* PSR total compliance
 * I have to clean this repository and make it a clean release.
 * In a near future this folder will be a configuration variable you will could move around.
 * Error pages are missing

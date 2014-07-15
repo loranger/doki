@@ -8,5 +8,5 @@
             @else
             <li><a href="{{ $root }}/{{ $name }}">{{ ucfirst($name) }}</a></li>
         @endif
-    @endforeach  
+    @endforeach
 </ul>
