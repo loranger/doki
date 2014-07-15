@@ -1,0 +1,22 @@
+{
+  "name": "welp",
+  "version": "0.0.0",
+  "description": "welp dating website recommendation project",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "loranger",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.8.5",
+    "gulp-autoprefixer": "0.0.8",
+    "gulp-concat": "^2.3.0",
+    "gulp-imagemin": "^0.6.1",
+    "gulp-minify-css": "^0.3.6",
+    "gulp-order": "^1.1.1",
+    "gulp-rimraf": "^0.1.0",
+    "gulp-uglify": "^0.3.1",
+    "imagemin-pngcrush": "^0.1.0"
+  }
+}
