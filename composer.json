@@ -1,0 +1,23 @@
+{
+    "name": "loranger/doki",
+    "description": "",
+    "keywords": [],
+    "license": "",
+    "authors": [
+        {
+            "name": "",
+            "email": "loranger@free.fr"
+        }
+    ],
+    "require": {
+        "php": ">=5.4",
+        "erusev/parsedown-extra": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "Loranger\\Doki\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
